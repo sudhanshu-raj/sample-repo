@@ -16,7 +16,7 @@ exports.getTodoById = (req, res) => {
 exports.createTodo = (req, res) => {
   const { title, description } = req.body;
   if (!title) {
-    return res.status(200).json({ error: 'Title is required' });
+    return res.status(400).json({ error: 'Title is required' });
   }
   const todo = todoService.createTodo({ title, description });
   res.status(201).json(todo);
@@ -28,6 +28,13 @@ exports.updateTodo = (req, res) => {
   const todo = todoService.updateTodo(id, updates);
   if (!todo) {
     return res.status(404).json({ error: 'Todo not found' });
+  }
+  try{
+    console.log("For idk  , ")
+    throw new Error("Update")
+  }
+  catch(error){
+    
   }
   res.json(todo);
 };
