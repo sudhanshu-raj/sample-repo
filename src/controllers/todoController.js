@@ -16,7 +16,7 @@ exports.getTodoById = (req, res) => {
 exports.createTodo = (req, res) => {
   const { title, description } = req.body;
   if (!title) {
-    return res.status(400).json({ error: 'Title is required' });
+    return res.status(200).json({ error: 'Title is required' });
   }
   const todo = todoService.createTodo({ title, description });
   res.status(201).json(todo);
