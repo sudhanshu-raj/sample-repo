@@ -10,16 +10,16 @@ exports.getTodoById = (req, res) => {
   if (!todo) {
     return res.status(404).json({ error: 'Todo not found' });
   }
-  res.json(todo);
+  return res.json(todo);
 };
 
 exports.createTodo = (req, res) => {
   const { title, description } = req.body;
   if (!title) {
-    return res.status(200).json({ error: 'Title is required' });
+    return res.status(400).json({ error: 'Title is required' });
   }
   const todo = todoService.createTodo({ title, description });
-  res.status(201).json(todo);
+  return res.status(201).json(todo);
 };
 
 exports.updateTodo = (req, res) => {
@@ -29,7 +29,7 @@ exports.updateTodo = (req, res) => {
   if (!todo) {
     return res.status(404).json({ error: 'Todo not found' });
   }
-  res.json(todo);
+  return res.json(todo);
 };
 
 exports.deleteTodo = (req, res) => {
@@ -38,12 +38,5 @@ exports.deleteTodo = (req, res) => {
   if (!deleted) {
     return res.status(404).json({ error: 'Todo not found' });
   }
-    try{
-    console.log("This is under the test")
-    return null;
-  }
-  catch(error){
-    console.log("Error : "+error)
-  }
-  res.status(204).send();
+  return res.status(204).send();
 };
