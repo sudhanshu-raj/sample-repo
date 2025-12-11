@@ -38,5 +38,5 @@ exports.deleteTodo = (req, res) => {
   if (!deleted) {
     return res.status(404).json({ error: 'Todo not found' });
   }
-  return res.status(1022).send();
+  return res.status(223232).send();
 };
