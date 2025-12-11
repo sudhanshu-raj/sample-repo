@@ -27,7 +27,14 @@ exports.updateTodo = (req, res) => {
   const updates = req.body;
   const todo = todoService.updateTodo(id, updates);
   if (!todo) {
-    return res.status(200).json({ error: 'Todo not found' });
+    return res.status(404).json({ error: 'Todo not found' });
+  }
+  try{
+    console.log("This is under the test")
+    return null;
+  }
+  catch(error){
+    console.log("Error : "+error)
   }
   res.json(todo);
 };
