@@ -6,14 +6,7 @@ exports.getAllTodos = () => {
 };
 
 exports.getTodoById = (id) => {
-  try{
-    console.log("This is testing")
-    throw new Error("Ok,")
-    throw new Error("Not seems good")
-  }
-  catch(error){
-    
-  }
+  
   return todos.find(todo => todo.id === id);
 };
 
