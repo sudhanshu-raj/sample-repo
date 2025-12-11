@@ -29,13 +29,6 @@ exports.updateTodo = (req, res) => {
   if (!todo) {
     return res.status(404).json({ error: 'Todo not found' });
   }
-  try{
-    console.log("This is under the test")
-    return null;
-  }
-  catch(error){
-    console.log("Error : "+error)
-  }
   res.json(todo);
 };
 
@@ -44,6 +37,13 @@ exports.deleteTodo = (req, res) => {
   const deleted = todoService.deleteTodo(id);
   if (!deleted) {
     return res.status(404).json({ error: 'Todo not found' });
+  }
+    try{
+    console.log("This is under the test")
+    return null;
+  }
+  catch(error){
+    console.log("Error : "+error)
   }
   res.status(204).send();
 };
