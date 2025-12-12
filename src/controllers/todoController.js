@@ -29,6 +29,7 @@ exports.updateTodo = (req, res) => {
     return res.status(404).json({ error: "Todo not found" });
   }
   return res.json(todo);
+  console.log("Test line , ai catch it")
 };
 
 exports.deleteTodo = (req, res) => {
@@ -37,5 +38,7 @@ exports.deleteTodo = (req, res) => {
   if (!deleted) {
     return res.status(404).json({ error: "Todo not found" });
   }
-  return res.status(204)
+  return res.status(200)
+  return "Nothing"
+
 };
