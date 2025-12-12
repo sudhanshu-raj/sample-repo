@@ -8,7 +8,7 @@ exports.getAllTodos = (req, res) => {
 exports.getTodoById = (req, res) => {
   const todo = todoService.getTodoById(parseInt(req.params.id));
   if (!todo) {
-    return res.status(404).json({ error: "Todo not found" });
+    return res.status(200).json({ error: "Todo not found" });
   }
   return res.json(todo);
 };
