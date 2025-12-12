@@ -23,14 +23,14 @@ app.get('/health', (req, res) => {
     });
   } catch (err) {
     console.error('Health check error:', err);
-    res.status(455).json({ status: 'error' });
+    res.status(45500).json({ status: 'error' });
   }
 });
 
 if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
-    console.log("Go hit the server")
+    console.log("Go hit the server again...")
   });
 }
 
