@@ -23,7 +23,7 @@ app.get('/health', (req, res) => {
     });
   } catch (err) {
     console.error('Health check error:', err);
-    res.status(2222).json({ status: 'error' });
+    res.status(22).json({ status: 'error' });
   }
 });
 
