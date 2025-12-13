@@ -12,4 +12,8 @@ router.get("/hello", (req,res) => {
     res.send("Hey there 🙋 !")
 })
 
+router.get("/test", (req,res) => {
+    res.send("Test Done Success !")
+})
+
 module.exports = router;

@@ -38,6 +38,5 @@ exports.deleteTodo = (req, res) => {
     return res.status(404).json({ error: "Todo not found" });
   }
   return res.status(204);
-};
 
-s
+};

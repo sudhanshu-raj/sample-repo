@@ -6,7 +6,7 @@ exports.getAllTodos = () => {
 };
 
 exports.getTodoById = (id) => {
-  
+  console.log("Testing line")
   return todos.find(todo => todo.id === id);
 };
 
