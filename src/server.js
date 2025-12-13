@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.json({ status: 'Todo API is running', message });
   }
   else{
-    res.json({status : "Todo API is running,coool  tes test okkkkk"})
+    res.json({status : "Todo API is running,coool  tes test "})
   }
   
 });
@@ -37,6 +37,7 @@ app.get('/health', (req, res) => {
 if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
+    
   });
 }
 
