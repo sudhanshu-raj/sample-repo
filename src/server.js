@@ -9,7 +9,14 @@ app.use(express.json());
 app.use('/api/todos', todoRoutes);
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Todo API is running' });
+  const {message} = req.params.message;
+  if(message){
+    res.json({ status: 'Todo API is running', message });
+  }
+  else{
+    res.json({status : "Todo API is running"})
+  }
+  
 });
 
 app.get('/health', (req, res) => {
