@@ -14,7 +14,6 @@ router.get("/hello", (req,res) => {
 
 router.get("/test", (req,res) => {
     res.send("Test Done Success !")
-    return 202;
 })
 
 module.exports = router;
