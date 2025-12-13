@@ -8,4 +8,8 @@ router.post('/', todoController.createTodo);
 router.put('/:id', todoController.updateTodo);
 router.delete('/:id', todoController.deleteTodo);
 
+router.get("/hello", (req,res) => {
+    res.send("Hey there 🙋 !")
+})
+
 module.exports = router;
