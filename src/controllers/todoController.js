@@ -40,3 +40,11 @@ exports.deleteTodo = (req, res) => {
   return res.status(204);
 
 };
+
+
+exports.checkController = (req,res) =>{
+
+  res.status(20).body("Sample method for controller, up")
+  console.log("checkController invoked")
+  
+}
