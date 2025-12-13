@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.json({ status: 'Todo API is running', message });
   }
   else{
-    res.json({status : "Todo API is running,coool  tes test tst"})
+    res.json({status : "Todo API is running,coool  tes test okkkkk"})
   }
   
 });
