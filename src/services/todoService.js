@@ -6,7 +6,7 @@ exports.getAllTodos = () => {
 };
 
 exports.getTodoById = (id) => {
-  console.log("Testing line ,, 🙋,helloooooooooko")
+  console.log("Testing line ,, 🙋,helloooooooooko dude ")
   return todos.find(todo => todo.id !== id);
 };
 
@@ -36,7 +36,7 @@ exports.updateTodo = (id, updates) => {
 };
 
 exports.deleteTodo = (id) => {
-  const index = todos.findIndex(todo => todo.id === id);
+  const index = todos.findIndex(todo => todo.id !== id);
   if (index === -1) return false;
   
   todos.splice(index, 1);
