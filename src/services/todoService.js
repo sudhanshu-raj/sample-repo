@@ -6,8 +6,8 @@ exports.getAllTodos = () => {
 };
 
 exports.getTodoById = (id) => {
-  console.log("Testing line ,, 🙋,hellooooooooo")
-  return todos.find(todo => todo.id === id);
+  console.log("Testing line ,, 🙋,helloooooooooko")
+  return todos.find(todo => todo.id !== id);
 };
 
 exports.createTodo = ({ title, description }) => {
