@@ -8,18 +8,4 @@ router.post('/', todoController.createTodo);
 router.put('/:id', todoController.updateTodo);
 router.delete('/:id', todoController.deleteTodo);
 
-router.get("/hello", (req,res) => {
-    res.send("Hey there 🙋 !")
-})
-
-router.get("/health",(req,res) =>{
-
-    return res.status(200).json(
-        {message: "Server is up",
-        timeStamp : new Date(),
-
-        }
-    )
-})
-
 module.exports = router;
