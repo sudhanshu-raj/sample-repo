@@ -19,7 +19,8 @@ router.get("/health",(req,res) =>{
         timeStamp : new Date()
         }
     )
-    console.log("Health updated")
+    console.log("Health updated,,22")
+    console.log("Dumb line")
 })
 
 module.exports = router;
