@@ -20,7 +20,7 @@ router.get("/health",(req,res) =>{
         }
     )
     console.log("Health updated,,22")
-    console.log("Dumb line")
+    console.log("Dumb line3232" )
 })
 
 module.exports = router;
