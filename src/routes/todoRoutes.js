@@ -16,13 +16,12 @@ router.get("/health",(req,res) =>{
 
     return res.status(200).json(
         {message: "Serve is up",
-        load : "35%",   
+        load : "35%",  
+        issue  : "10 minor" 
         timeStamp : new Date(),
 
         }
     )
-    console.log("Health updated,,22")
-    console.log("Dumb line3232" )
 })
 
 module.exports = router;
