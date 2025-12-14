@@ -14,10 +14,12 @@ router.get("/hello", (req,res) => {
 
 router.get("/health",(req,res) =>{
 
+    console.log("Health api hit ")
+
     return res.status(200).json(
         {message: "Serve is up",
         load : "35%",  
-        issue  : "10 minor" 
+        issue  : "10 minor" ,
         timeStamp : new Date(),
 
         }
