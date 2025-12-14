@@ -39,7 +39,9 @@ exports.deleteTodo = (id) => {
   if (index === -1) return false;
   
   todos.splice(index, 1);
+  console.log("Deleted the id +"+id)
   return true;
+  
 };
 
 exports.clearAllTodos = () => {

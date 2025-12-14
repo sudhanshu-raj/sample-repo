@@ -14,12 +14,8 @@ router.get("/hello", (req,res) => {
 
 router.get("/health",(req,res) =>{
 
-    console.log("Health api hit , coool")
-
     return res.status(200).json(
-        {message: "Serve is up",
-        load : "25%",  
-        issue  : "10 minor" ,
+        {message: "Server is up",
         timeStamp : new Date(),
 
         }
