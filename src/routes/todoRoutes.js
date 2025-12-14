@@ -10,14 +10,15 @@ router.delete('/:id', todoController.deleteTodo);
 
 router.get("/hello", (req,res) => {
     res.send("Hey there 🙋 !")
-    console.log("Test line...123")
 })
 
 router.get("/health",(req,res) =>{
 
     return res.status(200).json(
         {message: "Serve is up",
-        timeStamp : new Date()
+        load : "35%",   
+        timeStamp : new Date(),
+
         }
     )
     console.log("Health updated,,22")
