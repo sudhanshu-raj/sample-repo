@@ -28,6 +28,7 @@ app.get('/health', (req, res) => {
       timestamp: Date.now(),
       version: process.env.npm_package_version || 'unknown'
     });
+        console.log("Health api just hit, node is up")
   } catch (err) {
     console.error('Health check error:', err);
     res.status(500).json({ status: 'error' });
