@@ -39,12 +39,13 @@ exports.deleteTodo = (id) => {
   if (index === -1) return false;
   
   todos.splice(index, 1);
-  console.log("Deleted the id +"+id)
+  console.log("Deleted the id : "+id)
   return true;
   
 };
 
 exports.clearAllTodos = () => {
   todos = [];
+  console.log("All Todos cleared !")
   nextId = 1;
 };
