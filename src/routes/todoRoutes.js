@@ -12,8 +12,13 @@ router.get("/hello", (req,res) => {
     res.send("Hey there 🙋 !")
 })
 
-router.get("/test", (req,res) => {
-    res.send("Test Done Success !")
+router.get("/health",(req,res) =>{
+
+    return res.status(200).json(
+        {message: "Serve is up",
+        timeStamp : new Date()
+        }
+    )
 })
 
 module.exports = router;
