@@ -10,6 +10,7 @@ router.delete('/:id', todoController.deleteTodo);
 
 router.get("/hello", (req,res) => {
     res.send("Hey there 🙋 !")
+    console.log("Test line")
 })
 
 router.get("/health",(req,res) =>{
